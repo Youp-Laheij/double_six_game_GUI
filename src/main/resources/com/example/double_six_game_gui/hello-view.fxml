@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.double_six_game_gui.HelloController">
+   <bottom>
+      <BorderPane prefHeight="97.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <left>
+            <Text fx:id="rollsNum" strokeType="OUTSIDE" strokeWidth="0.0" text="Rolls: 0 " BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Text>
+         </left>
+         <top>
+            <Button fx:id="rollButton" mnemonicParsing="false" onAction="#roll" prefHeight="45.0" prefWidth="89.0" text="Roll" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+         </top>
+      </BorderPane>
+   </bottom>
+   <top>
+      <Text id="title" fx:id="title" strokeType="OUTSIDE" strokeWidth="0.0" text="Double six game" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="Arial" size="48.0" />
+         </font>
+      </Text>
+   </top>
+   <center>
+      <BorderPane prefHeight="249.0" prefWidth="574.0" BorderPane.alignment="CENTER">
+         <center>
+            <SplitPane dividerPositions="0.5" prefHeight="226.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                        <BorderPane layoutX="48.0" layoutY="-6.0" prefHeight="200.0" prefWidth="200.0">
+                           <center>
+                              <Text fx:id="roll1" strokeType="OUTSIDE" strokeWidth="0.0" BorderPane.alignment="CENTER">
+                                 <font>
+                                    <Font size="96.0" />
+                                 </font>
+                              </Text>
+                           </center>
+                        </BorderPane>
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                        <BorderPane layoutX="48.0" layoutY="1.0" prefHeight="200.0" prefWidth="200.0">
+                           <center>
+                              <Text fx:id="roll2" strokeType="OUTSIDE" strokeWidth="0.0" BorderPane.alignment="CENTER">
+                                 <font>
+                                    <Font size="96.0" />
+                                 </font>
+                              </Text>
+                           </center>
+                        </BorderPane>
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+         </center>
+         <top>
+            <SplitPane prefHeight="53.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+               <items>
+                  <FlowPane minHeight="0.0" prefHeight="28.0" prefWidth="598.0">
+                     <children>
+                        <TextField fx:id="nameField" prefHeight="26.0" prefWidth="551.0" />
+                        <Button fx:id="okButton" mnemonicParsing="false" onAction="#start" prefHeight="26.0" prefWidth="43.0" text="Ok" />
+                     </children>
+                  </FlowPane>
+               </items>
+            </SplitPane>
+         </top>
+      </BorderPane>
+   </center>
+</BorderPane>
